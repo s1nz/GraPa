@@ -1,6 +1,8 @@
 # GraPa
 ### Subtle CSS Gradient Patterns
 
+## [See Demo](http://simurai.github.com/GraPa/)
+
 #### How to use
 
 ```css
@@ -18,7 +20,5 @@ For example:
     .grapa-5( hsl(0,0%,95%), 30px ); 
 }
 ```
-
-[See Demo](http://simurai.github.com/GraPa/)
 
 ![Screenshot](https://github.com/simurai/GraPa/raw/gh-pages/screenshot.png)

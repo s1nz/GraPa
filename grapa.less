@@ -1,6 +1,20 @@
-
 /* 
-    GraPa LESS Mixins
+    GraPa - Subtle CSS Gradient Patterns 
+    LESS Mixins
+    https://github.com/simurai/GraPa
+    
+    Usage:      
+        @import "grapa.less";
+        .css-class { 
+            .grapa-[nr]( color, size ); 
+        }
+            
+    Example:  
+        @import "grapa.less";
+        .css-class { 
+            .grapa-5 ( hsl(0,0%,95%), 30px ); 
+        }
+            
 */
 
 
@@ -11,9 +25,17 @@
 	@transparent: 	fadeout(@light, 100%);
 	
 	background-color: @color;
-	background-size: @w @w;
-	background-image:	-webkit-linear-gradient( 45deg, @transparent 0, @transparent 50%, @light 50%, @light @w),
-						-webkit-linear-gradient( -45deg, @transparent 0, @transparent 50%, @dark 50%, @dark @w);	
+	background-size:  @w @w;
+    background-image: -webkit-linear-gradient( 45deg, @transparent 0, @transparent 50%, @light 50%, @light @w),
+    				  -webkit-linear-gradient(-45deg, @transparent 0, @transparent 50%, @dark  50%, @dark  @w);	
+    background-image:    -moz-linear-gradient( 45deg, @transparent 0, @transparent 50%, @light 50%, @light @w),
+    				     -moz-linear-gradient(-45deg, @transparent 0, @transparent 50%, @dark  50%, @dark  @w);	
+    background-image:     -ms-linear-gradient( 45deg, @transparent 0, @transparent 50%, @light 50%, @light @w),
+    				      -ms-linear-gradient(-45deg, @transparent 0, @transparent 50%, @dark  50%, @dark  @w);	
+    background-image:      -o-linear-gradient( 45deg, @transparent 0, @transparent 50%, @light 50%, @light @w),
+    				       -o-linear-gradient(-45deg, @transparent 0, @transparent 50%, @dark  50%, @dark  @w);	
+    background-image:         linear-gradient( 45deg, @transparent 0, @transparent 50%, @light 50%, @light @w),
+    				          linear-gradient(-45deg, @transparent 0, @transparent 50%, @dark  50%, @dark  @w);	
     }
     
     
@@ -24,13 +46,20 @@
 	@light: 		lighten(@color, 2%);
 	@dark: 			darken(@color, 1%);
 	@transparent: 	fadeout(@light, 100%);
-	
 	@half: 			@w / 2;
 	
 	background-color: @color;
-	background-size: @w @half;
-	background-image:	-webkit-linear-gradient( 45deg, @transparent 0, @transparent @half, @light @half, @light @w),
-						-webkit-linear-gradient( -45deg, @transparent 0, @transparent @half, @dark @half, @dark @w);	
+	background-size:  @w @half;
+    background-image: -webkit-linear-gradient( 45deg, @transparent 0, @transparent @half, @light @half, @light @w),
+    				  -webkit-linear-gradient(-45deg, @transparent 0, @transparent @half, @dark  @half, @dark  @w);	
+    background-image:    -moz-linear-gradient( 45deg, @transparent 0, @transparent @half, @light @half, @light @w),
+    				     -moz-linear-gradient(-45deg, @transparent 0, @transparent @half, @dark  @half, @dark  @w);	
+    background-image:     -ms-linear-gradient( 45deg, @transparent 0, @transparent @half, @light @half, @light @w),
+    				      -ms-linear-gradient(-45deg, @transparent 0, @transparent @half, @dark  @half, @dark  @w);	
+    background-image:      -o-linear-gradient( 45deg, @transparent 0, @transparent @half, @light @half, @light @w),
+    				       -o-linear-gradient(-45deg, @transparent 0, @transparent @half, @dark  @half, @dark  @w);	
+    background-image:         linear-gradient( 45deg, @transparent 0, @transparent @half, @light @half, @light @w),
+    				          linear-gradient(-45deg, @transparent 0, @transparent @half, @dark  @half, @dark  @w);	
     }
 
 
@@ -42,9 +71,17 @@
 	@transparent: 	fadeout(@light, 100%);
 	
 	background-color: @color;
-	background-size: @w @w;
-	background-image:  -webkit-linear-gradient(0deg, @light 0px , @transparent 1px ),
-	                   -webkit-linear-gradient(90deg, @light 0px , @transparent 1px );
+	background-size:  @w @w;
+	background-image: -webkit-linear-gradient( 0deg, @light 0px , @transparent 1px ),
+	                  -webkit-linear-gradient(90deg, @light 0px , @transparent 1px );
+    background-image:    -moz-linear-gradient( 0deg, @light 0px , @transparent 1px ),
+                         -moz-linear-gradient(90deg, @light 0px , @transparent 1px );
+    background-image:     -ms-linear-gradient( 0deg, @light 0px , @transparent 1px ),
+                          -ms-linear-gradient(90deg, @light 0px , @transparent 1px );
+    background-image:      -o-linear-gradient( 0deg, @light 0px , @transparent 1px ),
+                           -o-linear-gradient(90deg, @light 0px , @transparent 1px );
+    background-image:         linear-gradient( 0deg, @light 0px , @transparent 1px ),
+                              linear-gradient(90deg, @light 0px , @transparent 1px );
     }
 
 
@@ -55,8 +92,13 @@
 	@light: 		lighten(@color, 3%);
 	@min: 			@w - 1px;
 	
-	background-size: @w @w;
-	background-image:	-webkit-linear-gradient( 90deg, @color 0, @color @min, @light @w);
+	background-color: @color;
+	background-size:  @w @w;
+	background-image: -webkit-linear-gradient(90deg, @color 0, @color @min, @light @w);
+    background-image:    -moz-linear-gradient(90deg, @color 0, @color @min, @light @w);
+    background-image:     -ms-linear-gradient(90deg, @color 0, @color @min, @light @w);
+    background-image:      -o-linear-gradient(90deg, @color 0, @color @min, @light @w);
+    background-image:         linear-gradient(90deg, @color 0, @color @min, @light @w);
     }
     
 
@@ -68,9 +110,11 @@
 	@transparent: 	fadeout(@color, 100%);
 	
 	background-color: @color;
-	background-size: @w @w;
-	background-image:  -webkit-linear-gradient(45deg, @light 1px, @transparent 1px );
+	background-size:  @w @w;
+	background-image: -webkit-linear-gradient(45deg, @light 1px, @transparent 1px );
+	background-image:    -moz-linear-gradient(45deg, @light 1px, @transparent 1px );
+	background-image:     -ms-linear-gradient(45deg, @light 1px, @transparent 1px );
+	background-image:      -o-linear-gradient(45deg, @light 1px, @transparent 1px );
+	background-image:         linear-gradient(45deg, @light 1px, @transparent 1px );
     }  
-    
-    
     
