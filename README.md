@@ -1,4 +1,2 @@
-GraPa
-=====
-
-Subtle CSS Gradient Patterns
+# GraPa
+## Subtle CSS Gradient Patterns

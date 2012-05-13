@@ -1,0 +1,76 @@
+
+/* 
+    GraPa LESS Mixins
+*/
+
+
+.grapa-5( @color: hsl(0,0%,95%), @w: 30px ) {
+	
+	@light: 		lighten(@color, 1%);
+	@dark: 			darken(@color, 1%);
+	@transparent: 	fadeout(@light, 100%);
+	
+	background-color: @color;
+	background-size: @w @w;
+	background-image:	-webkit-linear-gradient( 45deg, @transparent 0, @transparent 50%, @light 50%, @light @w),
+						-webkit-linear-gradient( -45deg, @transparent 0, @transparent 50%, @dark 50%, @dark @w);	
+    }
+    
+    
+    
+
+.grapa-4( @color: hsl(0,0%,95%), @w: 20px ) {
+	
+	@light: 		lighten(@color, 2%);
+	@dark: 			darken(@color, 1%);
+	@transparent: 	fadeout(@light, 100%);
+	
+	@half: 			@w / 2;
+	
+	background-color: @color;
+	background-size: @w @half;
+	background-image:	-webkit-linear-gradient( 45deg, @transparent 0, @transparent @half, @light @half, @light @w),
+						-webkit-linear-gradient( -45deg, @transparent 0, @transparent @half, @dark @half, @dark @w);	
+    }
+
+
+
+
+.grapa-3( @color: hsl(0,0%,95%), @w: 10px ) {
+	
+	@light: 		lighten(@color, 3%);
+	@transparent: 	fadeout(@light, 100%);
+	
+	background-color: @color;
+	background-size: @w @w;
+	background-image:  -webkit-linear-gradient(0deg, @light 0px , @transparent 1px ),
+	                   -webkit-linear-gradient(90deg, @light 0px , @transparent 1px );
+    }
+
+
+
+
+.grapa-2( @color: hsl(0,0%,95%), @w: 10px ) {
+	
+	@light: 		lighten(@color, 3%);
+	@min: 			@w - 1px;
+	
+	background-size: @w @w;
+	background-image:	-webkit-linear-gradient( 90deg, @color 0, @color @min, @light @w);
+    }
+    
+
+  
+
+.grapa-1( @color: hsl(0,0%,95%), @w: 10px ) {
+	
+	@light: 		lighten(@color, 20%);
+	@transparent: 	fadeout(@color, 100%);
+	
+	background-color: @color;
+	background-size: @w @w;
+	background-image:  -webkit-linear-gradient(45deg, @light 1px, @transparent 1px );
+    }  
+    
+    
+    
