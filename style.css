@@ -89,16 +89,3 @@ strong {
 	font-weight: normal;
 	color: #999;
 }
-
-
-.grapa-11 {
-	
-	
-	background-color: hsla(0,0%,95%,1);
-	background-size: 8px 8px;
-	
-	background-image:  -webkit-linear-gradient(45deg, hsla(0,0%,100%,1) 1px, hsla(0,0%,100%,0) 1px );
-	                   
-	                   
-	                   
-    }
